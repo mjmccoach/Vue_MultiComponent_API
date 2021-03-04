@@ -17,7 +17,22 @@ export default {
     'beer-list' : BeerList,
     'beer-detail' : BeerDetail,
     'favourite-beers' : FavouriteBeers
-    
+  },
+  data() {
+    return {
+      beers : []
+    }
+  },
+  mounted() {
+    this.getBeers()
+  },
+  methods : {
+    getBeers: function() {
+      fetch('https://api.punkapi.com/v2/beers')
+      .then(res => res.json())
+      .then(beers => this.beers = beers)
+
+    }
   }
 }
 </script>
