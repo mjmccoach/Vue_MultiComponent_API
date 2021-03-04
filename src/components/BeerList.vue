@@ -1,5 +1,5 @@
 <template>
-  <div class="Beer List">
+  <div class="beer-list">
     <h1>BeerList here</h1>
     <beer-list-item/>
   </div>
