@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <beer-list/>
   </div>
 </template>
 
 <script>
+import BeerList from './components/BeerList.vue';
 
 export default {
   name: 'App',
   components: {
+    'beer-list' : BeerList
     
   }
 }
