@@ -1,9 +1,10 @@
 <template>
-  <h2>I'm a Beer List Item</h2>
+  <p> {{ beer.name }} </p>
 </template>
 
 <script>
 export default {
+    props: ['beer']
 
 }
 </script>

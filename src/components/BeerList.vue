@@ -1,7 +1,6 @@
 <template>
   <div class="beer-list">
-    <h1>BeerList here</h1>
-    <beer-list-item/>
+    <beer-list-item v-for="(beer, index) in beers" :beer="beer" :key="index"></beer-list-item>  
   </div>
 </template>
 
@@ -13,6 +12,7 @@ export default {
   components: { 
       'beer-list-item' : BeerListItem 
   },
+  props : ['beers']
 
 }
 </script>
