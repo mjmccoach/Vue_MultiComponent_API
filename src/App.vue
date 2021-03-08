@@ -20,7 +20,8 @@ export default {
   },
   data() {
     return {
-      beers : []
+      beers : [],
+      selectedBeer : null
     }
   },
   mounted() {
@@ -32,6 +33,10 @@ export default {
       .then(res => res.json())
       .then(beers => this.beers = beers)
 
+    },
+
+    handleSelectBeer: function() {
+      this.selectedBeer = event.target.value
     }
   }
 }
