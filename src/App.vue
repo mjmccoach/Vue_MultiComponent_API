@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <beer-list :beers="beers"/>
-    <beer-detail/>
+    <beer-detail :selectedBeer="selectedBeer"/>
     <favourite-beers :beers="beers"/>
   </div>
 </template>
