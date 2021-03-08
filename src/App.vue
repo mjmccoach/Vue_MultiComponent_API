@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { eventBus } from './main.js'
 import BeerList from './components/BeerList.vue';
 import BeerDetail from './components/BeerDetail.vue';
 import FavouriteBeers from './components/FavouriteBeers.vue';
@@ -25,7 +26,9 @@ export default {
     }
   },
   mounted() {
-    this.getBeers()
+    this.getBeers();
+
+    eventBus.$on('beer-selected', beer => (this.selectedBeer = beer));
   },
   methods : {
     getBeers: function() {

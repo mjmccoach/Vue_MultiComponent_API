@@ -1,10 +1,18 @@
 <template>
-  <p> {{ beer.name }} </p>
+  <p v-on:click="handleSelectBeer"> {{ beer.name }} </p>
 </template>
 
 <script>
+import { eventBus } from '../main.js'
+
 export default {
-    props: ['beer']
+    props: ['beer'],
+    methods : {
+
+    handleSelectBeer: function() {
+      eventBus.$emit('beer-selected', this.beer)
+    }
+    }
 
 }
 </script>
